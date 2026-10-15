@@ -1,0 +1,12 @@
+---
+import FormatGraphic from './FormatGraphic.astro';
+interface Props { kind: 'landing' | 'company'; number: string; }
+const { kind, number } = Astro.props;
+---
+<div class="spotlight" data-spotlight data-kind={kind} aria-hidden="true">
+  <div class="spotlight__art spotlight__art--mono"><FormatGraphic kind={kind} /></div>
+  <div class="spotlight__art spotlight__art--color"><FormatGraphic kind={kind} /></div>
+  <div class="spotlight__light"></div>
+  <div class="spotlight__caption"><span>ФОРМАТ / {number}</span><span>СХЕМА САЙТА</span></div>
+  <span class="spotlight__corner"></span>
+</div>

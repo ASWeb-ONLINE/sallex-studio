@@ -1,0 +1,52 @@
+---
+interface Props { kind: 'landing' | 'company'; }
+const { kind } = Astro.props;
+---
+<svg class="format-graphic" viewBox="0 0 600 330" fill="none" aria-hidden="true" focusable="false">
+  <path d="M32 300H568M300 24v282" stroke="var(--art-grid)" stroke-dasharray="3 7" />
+  {kind === 'landing' ? (
+    <g transform="translate(11 -3) rotate(-8 300 165)">
+      <path d="M138 61h340v242H138z" fill="var(--art-shadow)" />
+      <path d="M119 39h340v242H119z" fill="var(--art-sheet)" stroke="var(--art-border)" />
+      <path d="M119 75h340" stroke="var(--art-border)" />
+      <path d="M139 56h35M359 56h14M385 56h14M411 56h26" stroke="var(--art-line)" stroke-width="3" />
+      <path d="M141 98h128v122H141z" fill="var(--art-color)" />
+      <path d="m157 203 33-86 35 86M172 170h37" stroke="var(--art-paper)" stroke-width="12" />
+      <path d="M290 108h141M290 127h114" stroke="var(--art-strong)" stroke-width="9" />
+      <path d="M290 154h141M290 165h141M290 176h101" stroke="var(--art-line)" stroke-width="3" />
+      <path d="M291 201h77v19h-77z" fill="var(--art-color)" />
+      <path d="M141 242h74M240 242h90M355 242h76" stroke="var(--art-border)" stroke-width="4" />
+      <path d="M141 253h54M240 253h68M355 253h57" stroke="var(--art-line)" stroke-width="2" />
+    </g>
+  ) : (
+    <g>
+      <path d="M82 132h436M180 78v184M438 78v184" stroke="var(--art-border)" stroke-dasharray="5 7" />
+      <g transform="rotate(-9 178 195)">
+        <path d="M67 106h218v177H67z" fill="var(--art-shadow)" />
+        <path d="M56 94h218v177H56z" fill="var(--art-sheet)" stroke="var(--art-border)" />
+        <path d="M56 119h218" stroke="var(--art-border)" />
+        <path d="M76 140h69v107H76z" fill="var(--art-color)" />
+        <path d="M164 145h90M164 160h65" stroke="var(--art-strong)" stroke-width="6" />
+        <path d="M164 182h86M164 193h86M164 204h54" stroke="var(--art-line)" stroke-width="3" />
+        <path d="M164 231h50" stroke="var(--art-color)" stroke-width="10" />
+      </g>
+      <g transform="rotate(7 410 178)">
+        <path d="M305 111h232v184H305z" fill="var(--art-shadow)" />
+        <path d="M294 99h232v184H294z" fill="var(--art-sheet)" stroke="var(--art-border)" />
+        <path d="M294 124h232" stroke="var(--art-border)" />
+        <path d="M313 148h192v34H313z" fill="var(--art-color)" />
+        <path d="M313 202h51v55h-51zM383 202h51v55h-51zM453 202h51v55h-51z" fill="var(--art-detail)" />
+        <path d="M323 214h30M393 214h30M463 214h30" stroke="var(--art-color)" stroke-width="4" />
+      </g>
+      <g transform="rotate(-2 306 121)">
+        <path d="M190 43h243v160H190z" fill="var(--art-sheet)" stroke="var(--art-border)" />
+        <path d="M190 69h243" stroke="var(--art-border)" />
+        <path d="M207 55h37M385 55h31" stroke="var(--art-line)" stroke-width="3" />
+        <path d="M207 87h94v96h-94z" fill="var(--art-color)" />
+        <path d="M317 94h96M317 109h71" stroke="var(--art-strong)" stroke-width="7" />
+        <path d="M317 136h96M317 147h80" stroke="var(--art-line)" stroke-width="3" />
+        <path d="M317 172h53" stroke="var(--art-color)" stroke-width="13" />
+      </g>
+    </g>
+  )}
+</svg>

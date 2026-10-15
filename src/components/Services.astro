@@ -1,0 +1,29 @@
+---
+import { services } from '../data/content';
+import SpotlightSurface from './SpotlightSurface.astro';
+import Arrow from './Arrow.astro';
+---
+<section id="services" class="services section section--dark" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="eyebrow"><span class="section-number">01</span> Услуги</p><h2 id="services-title">Сайт под<br />вашу задачу<span class="accent">.</span></h2></div>
+      <p class="section-heading__description">Для одного предложения или для компании с несколькими направлениями. Формат выбирается по содержанию и тому, что посетитель должен сделать на сайте.</p>
+    </div>
+    <div class="services__grid">
+      {services.map((service) => (
+        <article class="service-card">
+          <SpotlightSurface kind={service.id} number={service.number} />
+          <div class="service-card__content">
+            <p class="service-card__label">{service.label}</p>
+            <h3>{service.title}</h3>
+            <p class="service-card__description">{service.description}</p>
+            <ul class="service-card__details">{service.details.map((detail) => <li>{detail}</li>)}</ul>
+            <a class="service-card__action" href="#contact" data-project-type={service.id}>{service.action}<Arrow diagonal /></a>
+          </div>
+        </article>
+      ))}
+    </div>
+    <p class="services__note"><span aria-hidden="true">↗</span> Наведите курсор на графику — свет проявит цвет.</p>
+  </div>
+</section>
+<script>import '../scripts/spotlight';</script>

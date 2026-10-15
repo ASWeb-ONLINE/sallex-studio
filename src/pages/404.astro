@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Wordmark from '../components/Wordmark.astro';
+import Arrow from '../components/Arrow.astro';
+import { localPath } from '../data/site';
+---
+<BaseLayout title="Страница не найдена — Sallex Studio"><header class="error-header container"><Wordmark /></header><main id="main" tabindex="-1" class="error-page container"><p class="eyebrow">Sallex Studio / 404</p><div class="error-page__number" aria-hidden="true">404<span class="accent">.</span></div><h1>Такой страницы нет</h1><a class="button button--dark" href={localPath()}>На главную<Arrow /></a></main></BaseLayout>

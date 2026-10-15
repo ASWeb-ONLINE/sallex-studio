@@ -1,0 +1,70 @@
+# Локальные референсы и непубличные материалы
+/references/local-only/
+/materials/local-only/
+/reports/local-only/
+/test-results/
+/playwright-report/
+/.astro/
+/.pnpm-store/
+
+# Секреты; разрешен только будущий обезличенный пример
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+id_rsa
+id_ed25519
+.ssh/
+credentials*.json
+secrets/
+
+# Зависимости проекта
+node_modules/
+vendor/
+.venv/
+venv/
+
+# Сборки, отчеты и кеши
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+coverage/
+.cache/
+.vite/
+.turbo/
+.parcel-cache/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+
+# Логи и временные файлы
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Экспортные архивы не заменяют работу с исходниками
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz

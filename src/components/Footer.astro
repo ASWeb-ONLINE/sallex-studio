@@ -1,0 +1,6 @@
+---
+import Wordmark from './Wordmark.astro';
+import { navigation, localPath, site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="footer section--dark"><div class="container"><div class="footer__top"><Wordmark /><p>Дизайн и разработка сайтов</p><nav aria-label="Навигация в подвале">{navigation.map((item) => <a href={`${localPath()}#${item.id}`}>{item.label}</a>)}</nav></div><div class="footer__bottom"><span>© {year} Sallex Studio</span><span>Версия для просмотра</span>{site.repository && <a href={site.repository}>Исходники на GitHub ↗</a>}</div></div></footer>

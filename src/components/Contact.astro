@@ -1,0 +1,20 @@
+---
+import { site } from '../data/site';
+import Arrow from './Arrow.astro';
+---
+<section id="contact" class="contact section section--dark" aria-labelledby="contact-title">
+  <div class="container contact__grid">
+    <div class="contact__intro"><p class="eyebrow"><span class="section-number">04</span> Следующий шаг</p><h2 id="contact-title">Обсудим<br />ваш сайт<span class="accent">.</span></h2><p>Расскажите, что за бизнес, какой сайт нужен и какую задачу он должен решить.</p><div class="contact__graphic" aria-hidden="true">↗</div></div>
+    <div class="contact-preview" aria-label="Подготовка описания проекта">
+      {site.contactMode === 'direct' && site.contacts.length > 0 && <div class="contact__links">{site.contacts.map((contact) => <a class="text-link" href={contact.url}>{contact.label}<Arrow diagonal /></a>)}</div>}
+      <div class="field"><label for="project-type">Формат сайта</label><select id="project-type" name="project-type"><option value="unsure">Пока не определился</option><option value="landing">Лендинг</option><option value="company">Сайт компании</option></select></div>
+      <div class="field"><label for="project-description">О задаче</label><textarea id="project-description" name="project-description" rows="5" placeholder="Несколько слов о бизнесе и будущем сайте" maxlength="5000" aria-describedby="preview-note"></textarea></div>
+      <p id="preview-note" class="preview-note"><span class="red-square" aria-hidden="true"></span><span>Демо-режим: текст не отправляется и не сохраняется сайтом.</span></p>
+      <button class="button button--light copy-button" type="button" data-copy-button hidden>Скопировать описание <Arrow diagonal /></button>
+      <p class="copy-status" data-copy-status role="status" aria-live="polite" aria-atomic="true"></p>
+      <div class="manual-copy" data-manual-copy hidden><label for="manual-description">Текст для ручного копирования</label><textarea id="manual-description" readonly rows="6"></textarea><p>Выделите текст и скопируйте его обычным способом.</p></div>
+      <noscript><p class="no-js-note">Можно подготовить описание в поле выше и скопировать его вручную. Автоматическое копирование доступно с JavaScript.</p></noscript>
+    </div>
+  </div>
+</section>
+<script>import '../scripts/contact-preview';</script>

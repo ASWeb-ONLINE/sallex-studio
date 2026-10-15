@@ -1,0 +1,32 @@
+:root {
+  --color-paper: #eeece8;
+  --color-ink: #111111;
+  --color-night: #0d0d0d;
+  --color-panel: #1b1b1b;
+  --color-text-inverse: #f2f0ec;
+  --color-muted-on-light: #625e5a;
+  --color-muted-on-dark: #aaa6a2;
+  --color-accent: #c62836;
+  --color-accent-shadow: #7a2030;
+  --color-line-light: #ccc8c2;
+  --color-line-dark: #3b3937;
+  --color-art-sheet: #262626;
+  --color-art-line: #858585;
+  --color-art-border: #686868;
+  --color-art-base: #969696;
+  --color-art-detail: #393939;
+  --font-display: 'Oswald Variable', 'Arial Narrow', sans-serif;
+  --font-body: 'Golos Text Variable', Arial, sans-serif;
+  --page-width: 1320px;
+  --gutter: clamp(24px, 4.2vw, 64px);
+  --section-space: clamp(72px, 7.8vw, 112px);
+  --radius: 2px;
+  --time-fast: 180ms;
+  --time-leave: 340ms;
+  --ease: cubic-bezier(.2,.65,.3,1);
+  --spot-radius: 210px;
+  --spot-halo-radius: 260px;
+  --spot-intensity: .13;
+  --spot-color: 198 40 54;
+  --header-height: 84px;
+}

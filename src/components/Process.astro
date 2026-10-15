@@ -1,0 +1,11 @@
+---
+import { process } from '../data/content';
+---
+<section id="approach" class="process section" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section-heading"><div><p class="eyebrow"><span class="section-number">02</span> Подход</p><h2 id="process-title">От задачи<br />до работающего сайта<span class="accent">.</span></h2></div><p class="process__aside">Последовательно.<br />С вниманием к целому<br />и к каждой детали.</p></div>
+    <ol class="process__list">
+      {process.map((step, index) => <li><span class="process__number" aria-hidden="true">0{index + 1}</span><h3>{step.title}</h3><p>{step.text}</p><span class="process__mark" aria-hidden="true">↗</span></li>)}
+    </ol>
+  </div>
+</section>

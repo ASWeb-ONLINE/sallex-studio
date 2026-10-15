@@ -1,0 +1,21 @@
+---
+import Wordmark from './Wordmark.astro';
+import Arrow from './Arrow.astro';
+import { navigation, localPath } from '../data/site';
+---
+<header class="header">
+  <div class="container header__inner">
+    <Wordmark />
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      {navigation.map((item) => <a href={`${localPath()}#${item.id}`}>{item.label}</a>)}
+    </nav>
+    <a class="header__action text-link" href={`${localPath()}#contact`}>Обсудить проект <Arrow diagonal /></a>
+    <details class="mobile-menu">
+      <summary aria-label="Открыть меню"><span class="menu-label">Меню</span><span class="menu-icon" aria-hidden="true"></span></summary>
+      <nav aria-label="Мобильная навигация">
+        {navigation.map((item, index) => <a href={`${localPath()}#${item.id}`}><span class="menu-number">0{index + 1}</span>{item.label}<Arrow /></a>)}
+      </nav>
+    </details>
+  </div>
+</header>
+<script>import '../scripts/navigation';</script>
