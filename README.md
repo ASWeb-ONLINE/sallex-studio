@@ -4,7 +4,7 @@
 
 **Этап: IMPLEMENTATION_AND_PREVIEW.** Разработка разрешена владельцем 15.10.2026; PREPARATION_ONLY завершен. Дизайн подготовлен для оценки владельцем, окончательное визуальное принятие не заявляется.
 
-**Исходники:** [ASWeb-ONLINE/sallex-studio](https://github.com/ASWeb-ONLINE/sallex-studio), public. **Адрес GitHub Pages:** [открыть Sallex Studio](https://asweb-online.github.io/sallex-studio/). Завершение публикации разрешено владельцем 25.10.2026; текущий результат запуска виден в [Actions](https://github.com/ASWeb-ONLINE/sallex-studio/actions).
+**[Открыть сайт Sallex Studio](https://asweb-online.github.io/sallex-studio/)** — опубликован в GitHub Pages и проверен в браузере 25.10.2026. **Исходники:** [ASWeb-ONLINE/sallex-studio](https://github.com/ASWeb-ONLINE/sallex-studio), public. Результаты автоматических проверок и публикации — в [Actions](https://github.com/ASWeb-ONLINE/sallex-studio/actions).
 
 Обновления выполняются в этом же проекте через Codex: изменение исходников → проверка → commit/push в main → автоматическая сборка и публикация. GitHub хранит код, GitHub Pages показывает готовый сайт. Для просмотра сайта локальный сервер не нужен. Финальный адрес и проверки каждого выпуска фиксируются в [отчете](docs/qa-report.md).
 
