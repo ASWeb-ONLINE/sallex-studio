@@ -1,4 +1,4 @@
-name: Check and preview
+name: Check and publish
 
 on:
   push:
@@ -22,6 +22,9 @@ env:
 jobs:
   check:
     name: Build and browser checks
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
@@ -40,8 +43,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Type and template checks
         run: pnpm run check
-      - name: Pages metadata (only after the owner enables publication)
-        if: vars.PAGES_ENABLED == 'true' && github.event_name != 'pull_request'
+      - name: Pages metadata
+        if: vars.PAGES_ENABLED == 'true' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         id: pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - name: Build static site
@@ -55,14 +58,14 @@ jobs:
       - name: Measure build
         run: pnpm run measure
       - name: Upload only the checked static site
-        if: vars.PAGES_ENABLED == 'true' && github.event_name != 'pull_request'
+        if: vars.PAGES_ENABLED == 'true' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: dist
 
   deploy:
     name: Publish GitHub Pages
-    if: vars.PAGES_ENABLED == 'true' && github.event_name != 'pull_request'
+    if: vars.PAGES_ENABLED == 'true' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: check
     runs-on: ubuntu-24.04
     permissions:
