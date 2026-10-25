@@ -1,27 +1,28 @@
 ---
 import Arrow from './Arrow.astro';
+import BrandSquare from './BrandSquare.astro';
 ---
 <section class="hero" aria-labelledby="hero-title">
   <div class="container">
     <div class="hero__top">
       <p class="eyebrow"><span class="red-square" aria-hidden="true"></span>Авторская веб-студия</p>
-      <p class="hero__disciplines">Структура / Дизайн / Разработка</p>
+      <p class="hero__promise">Личная ответственность за каждый проект</p>
     </div>
     <div class="hero__poster" aria-hidden="true">
       <div class="hero__shadow">SALLEX</div>
       <div class="hero__letters">SALLEX</div>
-      <div class="hero__signature"><span class="hero__line"></span><span>STUDIO</span><span class="hero__cross">✳</span></div>
+      <div class="hero__signature"><span class="hero__line"></span><span>STUDIO</span><BrandSquare /></div>
     </div>
     <div class="hero__bottom">
       <h1 id="hero-title">Дизайн и разработка<span> сайтов</span></h1>
       <div class="hero__intro">
-        <p>От структуры и визуальной идеи до готового сайта. Проект веду лично: продумываю логику, создаю дизайн и собираю работающую версию.</p>
+        <p>Хороший сайт не просто рассказывает о вашем бизнесе. Он помогает находить новых клиентов, вызывать доверие и развиваться. Я лично погружаюсь в вашу идею и превращаю ее в работающий инструмент.</p>
         <div class="hero__actions">
           <a class="button button--dark" href="#contact">Обсудить проект <Arrow diagonal /></a>
           <a class="text-link" href="#approach">Как я работаю <Arrow /></a>
         </div>
       </div>
     </div>
-    <div class="hero__foot"><span>Смысл. Форма. Действие.</span><a href="#services">Листайте дальше <span aria-hidden="true">↓</span></a></div>
+    <div class="hero__foot"><span>Замысел обретает форму</span><a class="hero__scroll" href="#services" aria-label="Перейти к услугам"><Arrow /></a></div>
   </div>
 </section>

@@ -62,22 +62,23 @@ main:focus { outline: none; }
 /* A typographic poster, with an offset shadow made from the same lettering. */
 .hero { background: var(--color-paper); position: relative; overflow: clip; }
 .hero__top { display: flex; justify-content: space-between; align-items: center; padding-top: 37px; }
-.hero__disciplines { font-size: 13px; color: var(--color-muted-on-light); }
+.hero__promise { font-size: 13px; color: var(--color-muted-on-light); text-align: right; }
 .hero__poster { position: relative; container-type: inline-size; margin-top: 1px; padding-bottom: 40px; }
 .hero__letters, .hero__shadow { font-family: var(--font-display); font-size: 32.5cqw; font-weight: 600; line-height: 1.04; letter-spacing: -.05em; white-space: nowrap; }
 .hero__letters { position: relative; z-index: 1; }
 .hero__shadow { position: absolute; inset: 0; color: var(--color-ink); opacity: .055; transform: translate(18px, 30px) skewX(-7deg); transform-origin: bottom; mask-image: linear-gradient(160deg, transparent 32%, black 85%); }
 .hero__signature { position: absolute; bottom: 31px; right: 0; display: flex; align-items: center; gap: 25px; width: 38%; font-size: 19px; font-weight: 500; letter-spacing: .28em; }
 .hero__line { height: 1px; background: var(--color-ink); flex: 1; }
-.hero__cross { color: var(--color-accent); font-size: 36px; letter-spacing: 0; line-height: 1; }
+.brand-square { width: 28px; height: 28px; flex: 0 0 auto; }
 .hero__bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; border-top: 1px solid var(--color-line-light); padding-top: 28px; }
 .hero h1 { max-width: 560px; font-size: clamp(34px, 3.4vw, 49px); }
 .hero h1 span { display: block; }
 .hero__intro > p { font-size: 16px; line-height: 1.65; max-width: 570px; color: var(--color-muted-on-light); }
 .hero__actions { display: flex; gap: 28px; align-items: center; margin-top: 25px; }
 .hero__foot { display: flex; justify-content: space-between; align-items: center; margin-top: 42px; padding-bottom: 24px; font-size: 12px; color: var(--color-muted-on-light); letter-spacing: .05em; }
-.hero__foot a { min-height: 44px; display: inline-flex; align-items: center; gap: 25px; }
-.hero__foot a span { font-size: 20px; }
+.hero__scroll { width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; color: var(--color-accent); }
+.hero__scroll .arrow { transform: rotate(90deg); }
+.hero__scroll:hover .arrow { transform: translateY(3px) rotate(90deg); }
 
 /* Services: color and mono are identical geometry, only the color layer is masked. */
 .services { position: relative; }
@@ -215,11 +216,11 @@ select:focus-visible, textarea:focus-visible { outline-offset: 3px; }
   .mobile-menu nav a { min-height: 58px; display: flex; align-items: center; border-bottom: 1px solid var(--color-line-light); font-size: 18px; gap: 22px; }
   .mobile-menu nav .arrow { margin-left: auto; }
   .menu-number { font-size: 12px; color: var(--color-muted-on-light); }
-  .hero__top { padding-top: 34px; }
-  .hero__disciplines { display: none; }
+  .hero__top { padding-top: 34px; gap: 24px; }
+  .hero__promise { max-width: 280px; }
   .hero__poster { margin-top: 16px; padding-bottom: 36px; }
   .hero__signature { bottom: 14px; font-size: 15px; gap: 14px; width: 44%; }
-  .hero__cross { font-size: 25px; }
+  .brand-square { width: 20px; height: 20px; }
   .hero__bottom { gap: 30px; }
   .hero h1 { font-size: 35px; }
   .hero__intro > p { font-size: 16px; }
@@ -264,12 +265,12 @@ select:focus-visible, textarea:focus-visible { outline-offset: 3px; }
   .wordmark { font-size: 25px; }
   .wordmark__studio { font-size: 8px; }
   .eyebrow { font-size: 12px; letter-spacing: .08em; }
-  .hero__top { padding-top: 31px; }
+  .hero__top { padding-top: 31px; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .hero__promise { font-size: 12px; max-width: none; text-align: left; }
   .hero__poster { margin-top: 25px; padding-bottom: 39px; }
   .hero__letters, .hero__shadow { font-size: 32.5cqw; line-height: 1.15; }
   .hero__shadow { transform: translate(5px,11px) skewX(-5deg); opacity: .06; }
   .hero__signature { width: 55%; bottom: 12px; font-size: 12px; letter-spacing: .25em; }
-  .hero__cross { font-size: 25px; }
   .hero__bottom { grid-template-columns: 1fr; padding-top: 25px; gap: 20px; }
   .hero h1 { font-size: 36px; max-width: 350px; line-height: 1.13; }
   .hero h1 span { display: inline; }
@@ -279,7 +280,6 @@ select:focus-visible, textarea:focus-visible { outline-offset: 3px; }
   .hero__actions .text-link { justify-content: flex-start; gap: 22px; }
   .hero__foot { margin-top: 14px; padding-bottom: 17px; }
   .hero__foot > span { font-size: 12px; letter-spacing: 0; }
-  .hero__foot a { gap: 12px; font-size: 12px; }
   h2 { font-size: 48px; }
   .section-heading .eyebrow, .about .eyebrow, .contact .eyebrow, .faq .eyebrow { margin-bottom: 19px; }
   .section-heading__description { font-size: 16px; }
